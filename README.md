@@ -36,7 +36,8 @@ Seamless integration with Lace Midnight wallet for proof generation, network hei
 ### 4. Connected Wallet Header & Network Badge
 Real-time indicator showing active Midnight Preprod network status and formatted employee wallet address (`mn_addr_preprod1...`).
 
-![Lace Wallet Connected Status](docs/screenshots/04-wallet-connection.png)
+<img width="974" height="117" alt="image" src="https://github.com/user-attachments/assets/d27acf7c-711c-4159-a314-6f5adba78665" />
+
 
 ---
 
