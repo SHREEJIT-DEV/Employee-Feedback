@@ -17,6 +17,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import wasm from 'vite-plugin-wasm';
 import topLevelAwait from 'vite-plugin-top-level-await';
+import { nodePolyfills } from 'vite-plugin-node-polyfills';
 import { fileURLToPath, URL } from 'node:url';
 
 const localModulesDir = fileURLToPath(new URL('./node_modules', import.meta.url));
@@ -51,18 +52,14 @@ export default defineConfig({
   plugins: [
     react(),
     wasm(),
-    // Polyfill `buffer` for browser builds: map 'buffer' -> npm buffer package
-    // enforce:'pre' ensures this runs BEFORE vite:resolve externalizes Node built-ins
-    {
-      name: 'buffer-polyfill',
-      enforce: 'pre' as const,
-      resolveId(id: string) {
-        if (id === 'buffer') {
-          return getModulePath('buffer/index.js');
-        }
-        return null;
+    nodePolyfills({
+      include: ['buffer', 'process', 'util', 'stream', 'events'],
+      globals: {
+        Buffer: true,
+        global: true,
+        process: true,
       },
-    },
+    }),
     topLevelAwait({
       // Be more permissive with top-level await
       promiseExportName: '__tla',

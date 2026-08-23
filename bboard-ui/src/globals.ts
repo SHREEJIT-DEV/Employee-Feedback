@@ -13,19 +13,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { Buffer } from 'buffer';
-
 // While Vite maps the mode that the application is running in by setting either the
 // `PROD` or `DEV` variables, we also need to ensure that `NODE_ENV` is set correctly
 // because we also use third-party libraries within the browser (such as Apollo Client),
 // that might expect it.
 //
-(globalThis as any).process = {
-  env: {
-    NODE_ENV: import.meta.env.MODE, // Map `MODE` to `process.env.NODE_ENV`.
-  },
+(globalThis as any).process = (globalThis as any).process || {};
+(globalThis as any).process.env = {
+  ...((globalThis as any).process.env || {}),
+  NODE_ENV: import.meta.env.MODE,
 };
-
-// We'll also make use of `Buffer` objects, so we'll ensure a pollyfill for one is
-// present on the global object.
-(globalThis as any).Buffer = Buffer;
