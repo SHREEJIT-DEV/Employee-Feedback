@@ -1,0 +1,23 @@
+{
+  "name": "anonymous-employee-feedback-root",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "api",
+    "bboard-cli",
+    "bboard-ui",
+    "contract"
+  ],
+  "scripts": {
+    "dev": "npm --prefix ./bboard-ui run dev --",
+    "build": "npm --prefix ./bboard-ui run build --",
+    "typecheck": "npm --prefix ./bboard-ui run typecheck --",
+    "preview": "npm --prefix ./bboard-ui run preview --"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.22.4",
+    "@swc/core-linux-x64-gnu": "^1.15.41",
+    "@rolldown/binding-linux-x64-gnu": "^1.2.0"
+  }
+}
