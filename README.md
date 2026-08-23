@@ -11,7 +11,7 @@ An enterprise-grade Zero-Knowledge (ZK) **Anonymous Employee Feedback & Survey P
 - 🌐 **Live Web Application**:https://employee-feedback-bboard-ui.vercel.app/
 - 💻 **Local Contract / App UI Link**: [http://localhost:5173/](http://localhost:5173/)
 - 📜 **Deployed Compact Contract Address**: `0200dbf964f541e1950883f5b2f539b66fd6111e46ce8e6e9551fbdd180114d5dd5b`
-- ▶️ **Live Video Demo**: [https://youtu.be/1rR7TygPcPQ](https://youtu.be/1rR7TygPcPQ?si=9up4oj9vO8IERGIN)
+- ▶️ **Live Video Demo**: https://youtu.be/Rs18ydto5HY
 
 ---
 
