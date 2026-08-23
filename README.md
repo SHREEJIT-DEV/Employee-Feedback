@@ -26,12 +26,12 @@ Deploy a fresh confidential survey contract on Midnight Preprod testnet or conne
 ### 2. Confidential Feedback & ZK Privacy Dashboard
 Submit 1–5 star ratings, department tags, and private feedback messages with real-time Zero-Knowledge Privacy Model guidance.
 
-![Anonymous Feedback Dashboard](docs/screenshots/02-feedback-dashboard.png)
+<img width="2856" height="1564" alt="image" src="https://github.com/user-attachments/assets/429ee2ec-47b2-4142-a916-4d3bf194335e" />
 
 ### 3. Lace Wallet Integration & Sync Status
 Seamless integration with Lace Midnight wallet for proof generation, network height synchronization, and testnet token dust generation.
 
-![Lace Wallet Integration & Sync](docs/screenshots/03-lace-wallet-sync.png)
+<img width="2859" height="1566" alt="image" src="https://github.com/user-attachments/assets/e2bc7b57-10a2-40ec-970d-deaf9464bd55" />
 
 ### 4. Connected Wallet Header & Network Badge
 Real-time indicator showing active Midnight Preprod network status and formatted employee wallet address (`mn_addr_preprod1...`).
