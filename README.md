@@ -138,9 +138,9 @@ Open **[http://localhost:5173/](http://localhost:5173/)** in your browser. Conne
 
 ---
 
-## 🌐 Preview / Preprod Deployment Status
+## 🌐  Preprod Deployment Status
 
-- 🚀 **Vercel Production Deployment**: [https://anonymous-employee-feedback-bboard.vercel.app/](https://anonymous-employee-feedback-bboard.vercel.app/)
+- 🚀 **Vercel Production Deployment**: https://employee-feedback-bboard-ui.vercel.app/
 
 ### Attempting Preprod Deployment:
 ```bash
