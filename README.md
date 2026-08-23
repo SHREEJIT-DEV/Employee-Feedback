@@ -20,7 +20,7 @@ An enterprise-grade Zero-Knowledge (ZK) **Anonymous Employee Feedback & Survey P
 ### 1. Landing Page & Contract Setup
 Deploy a fresh confidential survey contract on Midnight Preprod testnet or connect to an active contract address.
 
-<img width="2859" height="1566" alt="image" src="https://github.com/user-attachments/assets/e2bc7b57-10a2-40ec-970d-deaf9464bd55" />
+<img width="2878" height="1566" alt="image" src="https://github.com/user-attachments/assets/7ed60bcf-d6da-47f8-b0f1-6072e5abf9c0" />
 
 
 ### 2. Confidential Feedback & ZK Privacy Dashboard
