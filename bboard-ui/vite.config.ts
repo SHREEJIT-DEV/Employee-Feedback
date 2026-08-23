@@ -53,7 +53,6 @@ export default defineConfig({
     react(),
     wasm(),
     nodePolyfills({
-      include: ['buffer', 'process', 'util', 'stream', 'events'],
       globals: {
         Buffer: true,
         global: true,
