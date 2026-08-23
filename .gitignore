@@ -21,3 +21,5 @@ pnpm-debug.log*
 .vite/
 .next/
 *.tsbuildinfo
+vite.config.d.ts
+vite.config.js
