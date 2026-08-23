@@ -59,6 +59,18 @@ export default defineConfig({
         process: true,
       },
     }),
+    {
+      name: 'fix-node-polyfills-monorepo-shims',
+      enforce: 'pre' as const,
+      resolveId(id: string) {
+        if (id.includes('vite-plugin-node-polyfills/shims/')) {
+          const rawShim = id.split('vite-plugin-node-polyfills/shims/')[1].replace(/^\//, '');
+          const shimName = rawShim.split('/')[0];
+          return getModulePath(`vite-plugin-node-polyfills/shims/${shimName}/dist/index.js`);
+        }
+        return null;
+      },
+    },
     topLevelAwait({
       // Be more permissive with top-level await
       promiseExportName: '__tla',
@@ -116,6 +128,18 @@ export default defineConfig({
   resolve: {
     // Ensure WASM files are loaded properly
     alias: [
+      {
+        find: 'vite-plugin-node-polyfills/shims/buffer',
+        replacement: getModulePath('vite-plugin-node-polyfills/shims/buffer/dist/index.js'),
+      },
+      {
+        find: 'vite-plugin-node-polyfills/shims/global',
+        replacement: getModulePath('vite-plugin-node-polyfills/shims/global/dist/index.js'),
+      },
+      {
+        find: 'vite-plugin-node-polyfills/shims/process',
+        replacement: getModulePath('vite-plugin-node-polyfills/shims/process/dist/index.js'),
+      },
       {
         find: 'isomorphic-ws/browser.js',
         replacement: fileURLToPath(new URL('./src/shims/isomorphic-ws-browser.ts', import.meta.url)),
