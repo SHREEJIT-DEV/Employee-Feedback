@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "typeRoots": ["node_modules/@types", "../node_modules/@types"],
+    "paths": {
+      "@midnight-ntwrk/midnight-js-protocol/compact-runtime": [
+        "node_modules/@midnight-ntwrk/midnight-js-protocol/dist/compact-runtime.d.ts",
+        "../node_modules/@midnight-ntwrk/midnight-js-protocol/dist/compact-runtime.d.ts"
+      ],
+      "@midnight-ntwrk/midnight-js-protocol/compact-js": [
+        "node_modules/@midnight-ntwrk/midnight-js-protocol/dist/compact-js.d.ts",
+        "../node_modules/@midnight-ntwrk/midnight-js-protocol/dist/compact-js.d.ts"
+      ],
+      "@midnight-ntwrk/midnight-js-protocol/ledger": [
+        "node_modules/@midnight-ntwrk/midnight-js-protocol/dist/ledger.d.ts",
+        "../node_modules/@midnight-ntwrk/midnight-js-protocol/dist/ledger.d.ts"
+      ],
+      "@midnight-ntwrk/*": [
+        "node_modules/@midnight-ntwrk/*",
+        "../node_modules/@midnight-ntwrk/*"
+      ],
+      "pino": [
+        "node_modules/pino",
+        "../node_modules/pino"
+      ],
+      "rxjs": [
+        "node_modules/rxjs",
+        "../node_modules/rxjs"
+      ]
+    },
+    "allowJs": false,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "isolatedModules": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "esModuleInterop": false,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["src", "eslint.config.mjs"]
+}
